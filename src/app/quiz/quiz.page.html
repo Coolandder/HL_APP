@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: left;">Happy Learning</div>
+        <div onclick="window location" style="text-align: right;">Andrzej | <a href="./login.html" style="text-decoration: none; color: white;">Logout</a></div>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment (ionChange)="segmentChange($event)">
+    <ion-segment-button class='segmentBTN' value='' checked>All</ion-segment-button>
+    <ion-segment-button class='segmentBTN' value="easy" color='success'>Easy</ion-segment-button>
+    <ion-segment-button class='segmentBTN' value="medium" color='warning'>Medium</ion-segment-button>
+    <ion-segment-button class='segmentBTN' value="hard" color='danger'>Hard</ion-segment-button>
+  </ion-segment>
+
+  <app-quiz-interface [lvl]='level'></app-quiz-interface>
+
+
+</ion-content>
