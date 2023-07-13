@@ -1,4 +1,4 @@
-# Translate-App
+# HL_App
 
 Mobile app for learning english.
 
